@@ -1,0 +1,241 @@
+@media screen and (max-width: 1640px)
+    .header
+        &-row
+            &__navigation
+                .navigation-menu
+                    &__item
+                        margin-left: 30px
+            &__social
+                .social-phone
+                    margin-left: 30px
+                .social-language
+                    margin-left: 50px
+    .banner
+        .banner-top
+            .banner-row
+                &__title
+                    .title-header
+                        font-size: 60px
+                        letter-spacing: .1em
+                        line-height: 80px
+                &__image
+                    height: 600px
+    .services
+        margin-top: 100px
+
+@media screen and (max-width: 1400px)
+    .services
+        &-container
+            .services-row
+                justify-content: center
+                .services-block
+                    min-width: 500px
+                    height: 440px
+
+@media screen and (max-width: 1280px)
+    .header
+        &-row
+            &__navigation
+                .navigation-menu
+                    &__item
+                        margin-left: 20px
+            &__social
+                .social-phone
+                    margin-left: 30px
+                .social-language
+                    margin-left: 30px
+                .social-networks
+                    margin-left: 20px
+
+@media screen and (max-width: 1200px)
+    .header
+        transition: 2s
+        &-row
+            flex-direction: column
+            justify-content: space-between
+            &__logo
+                width: 100%
+            &__navigation
+                width: 100%
+                height: 0
+                transform: translateX(-100%)
+                transition: transform 0.5s
+                .navigation-menu
+                    margin-top: 40px
+                    flex-direction: column
+                    &__item
+                        margin: 15px 0
+                        text-align: center
+            &__social
+                width: 100%
+                height: 0
+                transform: translateX(-100%)
+                transition: transform 0.5s
+                flex-direction: column
+                align-items: center
+                .social-phone
+                    margin-top: 40px
+                    margin-bottom: 20px
+                .social-language
+                    margin-bottom: 20px
+        .header-row__menu
+            display: block
+            position: absolute
+            right: 20px
+            top: 40px
+    .banner
+        .banner-top
+            .banner-row
+                &__title
+                    .title-header
+                        font-size: 50px
+                        letter-spacing: .1em
+                        line-height: 70px
+                &__image
+                    margin-top: 100px
+                    height: 400px
+        .banner-button
+            display: none
+    .services
+        margin-top: 0
+        padding: 0
+@media screen and (max-width: 1200px)
+    .services
+        &-container
+            .services-row
+                .services-block
+                    min-width: 400px
+                    height: 340px
+                    margin-bottom: 20px
+                    &:nth-child(odd)
+                        margin-right: 20px
+                    &__description
+                        .services-block
+                            &__image
+                                padding-top: 58%
+
+@media screen and (max-width: 860px)
+    .services
+        &-container
+            .services-row
+                flex-direction: column
+                align-items: center
+                .services-block
+                    width: 540px
+                    height: 440px
+                    &:nth-child(odd)
+                        margin-right: 0
+                    &__description
+                        .services-block
+                            &__image
+                                padding-top: 58%
+
+@media screen and (max-width: 780px)
+    .banner
+        .banner-top
+            .banner-row
+                
+                &__brand
+                    padding-top: 90px
+                    svg
+                        .text--line
+                            font-size: 100px
+                &__title
+                    .title-header
+                        font-size: 40px
+                        line-height: 50px
+                &__image
+                    margin-top: 70px
+                    height: 400px
+                    background-attachment: scroll 
+    .button-phone
+        width: 60px
+        height: 60px
+        right: 20px
+        bottom: 20px
+        &__block
+            a
+                img
+                    width: 20px
+                    height: 20px
+
+@media screen and (max-width: 580px)
+    .banner
+        .banner-top
+            .banner-row
+                
+                &__brand
+                    svg
+                        .text--line
+                            font-size: 80px
+                &__title
+                    .title-header
+                        font-size: 30px
+                        letter-spacing: .1em
+                        line-height: 50px
+                &__image
+                    margin-top: 70px
+                    height: 400px 
+    .services
+        &-container
+            .services-row
+                margin-top: 30px
+                flex-direction: column
+                align-items: center
+                .services-block
+                    width: 100%
+                    &:nth-child(odd)
+                        margin-right: 0
+                    &__description
+                        .services-block
+                            &__image
+                                padding-top: 78%
+@media screen and (max-width: 460px)
+    .banner
+        .banner-top
+            .banner-row                
+                &__brand
+                    svg
+                        .text--line
+                            font-size: 60px
+                &__title
+                    .title-header
+                        font-size: 30px
+                        letter-spacing: .1em
+                        line-height: 50px
+                        br
+                            display: none
+                &__image
+                    margin-top: 70px
+                    height: 300px
+    .services
+        margin-top: -30px
+        &-container
+            .services-row
+                .services-block
+                    min-width: 100%
+                    height: 360px
+                    &__description
+                        .services-block
+                            &__image
+                                padding-top: 60%
+
+@media screen and (max-width: 400px)  
+    .services
+        margin-top: 10px
+        &-container
+            .services-row
+                .services-block
+                    min-width: 100%
+                    height: 340px
+                    &:before
+                        width: 300px
+                        height: 300px
+                    &:nth-child(odd)
+                        margin-right: 0
+                    &__description
+                        .services-block
+                            &__title, &__link
+                                padding-left: 20px
+                            &__image
+                                padding-top: 75%

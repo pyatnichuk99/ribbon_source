@@ -1,0 +1,20 @@
+{
+  "name": "ribbon",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-plumber-notifier": "^0.1.0",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-server-livereload": "^1.9.2",
+    "sass": "^1.50.1"
+  },
+  "description": ""
+}

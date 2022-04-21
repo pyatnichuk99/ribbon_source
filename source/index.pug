@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Ribbon
+        link(rel="stylesheet", href="./css/style.css")
+        link(rel="stylesheet", href="./css/media.css")
+        link(rel="stylesheet", href="https://unpkg.com/aos@2.3.1/dist/aos.css")
+        
+    body
+        header#header.header
+            .container
+                .header-row
+                    .header-row__logo
+                        a(href="#")
+                            img.logo-image(src="./img/logo.svg", alt="logo") 
+                    nav.header-row__navigation
+                        ul.navigation-menu
+                            li.navigation-menu__item
+                                a(href="#").item-link
+                                    |Головна
+                            li.navigation-menu__item
+                                a(href="#services").item-link
+                                    |Послуги
+                            li.navigation-menu__item
+                                a(href="#about").item-link
+                                    |Про нас
+                            li.navigation-menu__item
+                                a(href="#news").item-link
+                                    |Новини
+                            li.navigation-menu__item
+                                a(href="#contacts").item-link
+                                    |Контакти
+
+                    .header-row__social
+                        .social-phone 
+                            .social-phone__icon 
+                                img(src="./img/phone.svg", alt="phone")
+                            .social-phone__text                                 
+                                a(href="tel:+380638741860").phone-number
+                                    |+38 (063) 87 41 860
+                                p.phone-text 
+                                    |працюємо з 
+                                    span 08:00 
+                                    |– до 
+                                    span 17:00
+                        .social-language 
+                            p.social-language__item 
+                                |укр
+                            img(src="./img/down.svg")
+                        .social-networks 
+                            ul 
+                                li
+                                    a(href="#")
+                                        img(src="./img/facebook.svg", alt="")
+                                li
+                                    a(href="#")
+                                        img(src="./img/instagram.svg", alt="")
+                                li
+                                    a(href="#")
+                                        img(src="./img/mail.svg", alt="")
+                .header-row__menu
+                    span
+                    span
+                    span
+        main 
+            section#banner.banner
+                .banner-top
+                    .container
+                        .banner-row
+                            .banner-row__brand
+                                svg
+                                    symbol#text-copy
+                                        text.text--line(text-anchor='middle' x='50%' y='70%') RIBBON
+                                    g.g-ants
+                                        use#outline.text-copy(xlink:href='#text-copy')
+                            .banner-row__title
+                                h1.title-header
+                                    |Лідер постачання 
+                                    br 
+                                    |етикет продукції та 
+                                    br
+                                    |обладнання
+                            .banner-row__image
+                        .banner-button
+                            a(href="#services") 
+                                span                                    
+                                img(src="./img/down_button.svg", alt="")
+            section#services.services
+                .services-container 
+                    .services-row 
+                        .services-block(data-aos="fade-right")
+                            .services-block__description
+                                h3.services-block__title 
+                                    |Оперативно цифровий друк
+                                .services-block__link 
+                                    a(href="#").service-link
+                                        |детальніше
+                                        span
+                                        img(src="./img/down_button.svg", alt="")
+                                .services-block__image 
+                                    img(src="./img/service1.png", alt="")
+
+                        .services-block(data-aos="fade-left")
+                            .services-block__description
+                                h3.services-block__title 
+                                    |Продаж та обладнання
+                                .services-block__link 
+                                    a(href="#").service-link
+                                        |детальніше
+                                        span
+                                        img(src="./img/down_button.svg", alt="")
+                                .services-block__image 
+                                    img(src="./img/service2.png", alt="")
+
+                        .services-block(data-aos="fade-right")
+                            .services-block__description
+                                h3.services-block__title 
+                                    |витрані матеріали
+                                .services-block__link 
+                                    a(href="#").service-link
+                                        |детальніше
+                                        span
+                                        img(src="./img/down_button.svg", alt="")
+                                .services-block__image 
+                                    img(src="./img/service3.png", alt="")
+
+                        .services-block(data-aos="fade-left")
+                            .services-block__description
+                                h3.services-block__title 
+                                    |Сервіс
+                                .services-block__link 
+                                    a(href="#").service-link
+                                        |детальніше
+                                        span
+                                        img(src="./img/down_button.svg", alt="")
+                                .services-block__image 
+                                    img(src="./img/service4.png", alt="")            
+
+            .button-phone
+                .button-phone__block 
+                    a(href="tel:+380638741860") 
+                        img(src="./img/phone-call.svg", alt="") 
+
+                                
+
+
+
+                
+        script(src="https://unpkg.com/aos@2.3.1/dist/aos.js")
+        script(src="./js/main.js") 

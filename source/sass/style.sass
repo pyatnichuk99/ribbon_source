@@ -1,0 +1,385 @@
+@import 'vars'
+@import 'fonts'
+
+*
+    box-sizing: border-box
+html
+    scroll-behavior: smooth
+
+
+body
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: $sf_display
+
+
+a
+    text-decoration: none
+
+.container
+    max-width: 1780px
+    height: 100%
+    margin: auto
+    padding-left: 20px
+    padding-right: 20px
+
+.header
+    background-color: $background_color
+    position: fixed
+    width: 100%
+    z-index: 5
+    display: block
+    overflow: hidden
+    &-row
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding-top: 24px
+        padding-bottom: 24px
+        &__logo
+            a
+                display: flex
+        
+        &__navigation
+
+            .navigation-menu
+                display: flex
+                flex-direction: row
+                padding: 0
+                margin: 0
+                &__item
+                    display: block
+                    margin-left: 60px
+                    .item-link
+                        text-decoration: none
+                        color: $header_color
+                        font-size: 15px                        
+                        font-weight: 600
+                        letter-spacing: .02em
+                        text-transform: uppercase
+                        transition: all .4s ease-out
+                        &:hover
+                            color: $brand_color
+                            transition: all .4s ease-out
+        &__social
+            display: flex
+            .social-phone
+                display: flex
+                align-items: center
+                margin-left: 170px
+                &__icon
+                    margin-right: 15px
+                &__text
+                    .phone-number
+                        font-size: 17px
+                        line-height: 17px
+                        font-weight: bold
+                        color: $header_color
+                        letter-spacing: 0.04em
+                        transition: all .4s ease-out
+                        &:hover
+                            color: $brand_color
+                            transition: all .4s ease-out
+                    .phone-text
+                        color: $minor_color
+                        font-weight: 100
+                        font-size: 14px
+                        line-height: 14px
+                        margin-top: 8px
+                        margin-bottom: 0
+                        span
+                            font-weight: 600
+            .social-language
+                display: flex
+                align-items: center
+                margin-left: 120px
+                &__item
+                    font-size: 15px
+                    font-weight: 500
+                    color: $header_color
+                    line-height: 15px
+                    text-transform: uppercase
+                    margin-right: 10px
+                img
+                    width: 8px
+                    height: 3px 
+
+            .social-networks
+                margin-left: 56px
+                ul
+                    display: flex
+                    padding: 0
+                    margin: 0
+                    li
+                        width: 48px
+                        height: 48px
+                        box-sizing: border-box
+                        border: 1px solid $header_color                    
+                        transition: 1.2s
+                        display: block
+                        &:hover
+                            background-color: none
+                            box-shadow: inset 5em 0 0 0 $brand_color
+                        &:focus
+                            box-shadow: inset 5em 0 0 0 $brand_color
+                        a
+                            width: 100%
+                            height: 100%
+                            display: flex
+                            justify-content: center
+                            align-items: center
+    .header-row__menu
+        width: 30px
+        height: 30px
+        position: relative
+        z-index: 2
+        overflow: hidden
+        display: none
+        
+        span
+            display: block
+            height: 2px
+            width: 100%
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            background-color: $brand_color
+            transition: all 0.5s
+            border-radius: 1px 
+
+            &:nth-of-type(2)
+                top: calc(50% - 8px)
+            &:nth-of-type(3)
+                top: calc(50% + 8px)
+    .active_menu
+        transform: translateX(0)
+        height: 100%
+    .active
+        span
+            &:nth-of-type(1)
+                display: none
+            &:nth-of-type(2)
+                top: 50%
+                transform: translate(-50%, 0%) rotate(45deg)
+            &:nth-of-type(3)
+                top: 50%
+                transform: translate(-50%, 0%) rotate(-45deg)
+.banner
+    .banner-top
+        background-color: $background_color
+        height: 100vh
+    &-row
+        &__brand
+            padding-top: 192px
+            svg
+                width: 100%
+                .text--line
+                    font-size: 130px
+                    font-family: $sf_display
+                    font-weight: 900
+                    text-transform: uppercase
+                    letter-spacing: .1em
+                    line-height: 140px
+
+                #outline
+                    fill: none
+                    stroke: $header_color
+                    stroke-dasharray: 100%
+                    stroke-dashoffset: 0
+                    animation-name: outline
+                    animation-duration: 2.1s
+                    animation-timing-function: ease-in
+                    animation-fill-mode: forwards
+        &__title
+            display: flex
+            justify-content: center
+            text-align: center
+            margin-top: 20px
+            position: relative
+            .title-header
+                position: absolute
+                margin: 0
+                color: $header_color
+                font-weight: 800
+                font-size: 76px
+                letter-spacing: .02em
+                line-height: 90px
+                text-transform: uppercase
+        &__image
+            margin-top: 120px
+            background-image: url('../img/banner.png')        
+            height: 780px
+            width: 100%
+            background-size: cover
+            background-attachment: fixed
+            background-position: center
+            background-repeat: no-repeat
+            &:before
+                content: ""
+                background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%)
+                display: block
+                height: 100%
+
+    &-button
+        position: absolute
+        bottom: 30px
+        left: 32px
+        a
+            text-decoration: none
+            display: flex
+            flex-direction: column
+            align-items: center
+            height: 30px
+            color: $header_color
+
+            span
+                content: ''
+                background-color: $header_color
+                display: block
+                width: 2px
+                height: 12px
+                margin-top: 0
+                margin-bottom: 2px
+            &:hover
+                span
+                    height: 18px
+                    transition: 1s
+            img
+                width: 16px
+                height: 8px
+@keyframes outline
+    from
+        stroke-dashoffset: 100%
+
+    to
+        stroke-dashoffset: 0
+
+
+.services
+    overflow: hidden
+    position: static
+    margin-top: 260px
+    padding-top: 104px
+    &-container
+        max-width: 1368px
+        height: 100%
+        margin: auto
+        padding-left: 20px
+        padding-right: 20px
+        .services-row
+            display: flex
+            flex-wrap: wrap
+            .services-block
+                min-width: 640px
+                position: relative
+                height: 540px
+                overflow: hidden
+                margin-bottom: 48px
+                background-color: #019EDB
+                border: 5px solid $header_color
+                &:nth-child(odd)
+                    margin-right: 48px
+                &:before
+                    content: ''
+                    display: block
+                    position: absolute
+                    right: 150px
+                    bottom: 50px
+                    background: url('https://ribbon.ua/wp-content/themes/ribbon/img/decor.svg') no-repeat 0 0/contain
+                    width: 750px
+                    height: 756px
+                    transition: .8s
+                    
+                &:hover
+                    &:before
+                        transform: rotate(45deg)
+                &__description
+                    position: absolute
+                    top: 0
+                    left: 0
+                    right: 0
+                    bottom: 0
+                    .services-block
+                        &__title
+                            font-weight: bold
+                            font-size: 20px
+                            margin-top: 34px
+                            margin-bottom: 21px
+                            padding-left: 40px
+                            text-transform: uppercase
+                            letter-spacing: 0.02em
+                            color: $header_color
+                            margin-bottom: 22px
+                        &__link
+                            padding-left: 40px
+                            .service-link
+                                text-transform: uppercase
+                                font-size: 14px
+                                font-weight: bold
+                                letter-spacing: .06em                                
+                                text-decoration: none
+                                color: $header_color
+                                display: flex
+                                align-items: center                                
+                                span
+                                    content: ''
+                                    display: block
+                                    height: 2px
+                                    width: 12px
+                                    margin-left: 30px
+                                    background-color: $header_color
+                                img
+                                    transform: rotate(-90deg)
+                                &:hover
+                                    span
+                                        width: 18px
+                                        transition: 1s 
+                        &__image
+                            position: relative
+                            padding-top: 75%
+                            img
+                                position: absolute
+                                left: 0
+                                top: 0
+                                bottom: 0
+                                right: 0
+                                margin: auto
+                                max-width: 100%
+                                max-height: 100%
+                                width: auto
+                    
+.button-phone
+    background: $brand_color
+    position: fixed
+    width: 90px
+    height: 90px
+    border-radius: 50%
+    right: 45px
+    bottom: 45px
+    cursor: pointer
+    box-shadow: 0 0 0 rgba(0,171,237, 0.4)    
+    animation: pulse 1.5s infinite
+    &__block
+        height: 100%
+        a
+            width: 100%
+            height: 100%
+            display: flex
+            justify-content: center
+            align-items: center
+            img
+                width: 32px
+                height: 32px
+
+@keyframes pulse
+
+    0% 
+        box-shadow: 0 0 0 0 rgba(0,171,237,0.4)
+	
+    70%
+        box-shadow: 0 0 0 12px rgba(0,171,237,0)
+
+    100%
+        box-shadow: 0 0 0 0 rgba(0,171,237, 0)
